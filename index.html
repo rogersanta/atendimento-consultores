@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Atendimento</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            font-family: Arial, sans-serif;
+        }
+
+        .btn-atendimento {
+            padding: 20px 40px;
+            font-size: 24px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+
+        .btn-atendimento:hover {
+            background-color: #45a049;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-atendimento:active {
+            transform: translateY(0);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <button class="btn-atendimento" onclick="atenderCliente()">SEJA ATENDIDO</button>
+
+    <script>
+        // Lista de consultores
+        const consultores = [
+            "https://wa.me/5511947451158?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças",
+            "https://wa.me/5511932310905?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças",
+            "https://wa.me/5511947917606?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças",
+            "https://wa.me/5511953994317?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças",
+            "https://wa.me/5511966132035?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças",
+            "https://wa.me/5511962812748?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças",
+            "https://wa.me/5511966500701?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças"
+        ];
+
+        // Função principal
+        function atenderCliente() {
+            // Recupera ou inicializa o índice
+            let indice = localStorage.getItem('indiceConsultor') || 0;
+            indice = parseInt(indice);
+
+            // Redireciona para o consultor atual
+            window.open(consultores[indice], '_blank');
+
+            // Atualiza o índice
+            indice = (indice + 1) % consultores.length;
+            localStorage.setItem('indiceConsultor', indice);
+        }
+    </script>
+</body>
+</html>
