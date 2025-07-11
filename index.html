@@ -1,72 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Sistema de Atendimento</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Consig - Entenda Seu Crédito</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+      background-color: #f5f5f5;
+      color: #333;
+    }
 
-        .btn-atendimento {
-            padding: 20px 40px;
-            font-size: 24px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-            text-decoration: none;
-        }
+    .canva-embed {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 141.4286%;
+      padding-bottom: 0;
+      box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
+      margin-top: 1.6em;
+      margin-bottom: 0.9em;
+      overflow: hidden;
+      border-radius: 8px;
+      will-change: transform;
+    }
 
-        .btn-atendimento:hover {
-            background-color: #45a049;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.3);
-        }
+    .canva-embed iframe {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
 
-        .btn-atendimento:active {
-            transform: translateY(0);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-        }
-    </style>
+    .canva-link {
+      display: block;
+      margin-top: 1em;
+      text-align: center;
+      font-weight: bold;
+      text-decoration: none;
+      color: #0056b3;
+    }
+
+    .canva-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <button class="btn-atendimento" onclick="atenderCliente()">SEJA ATENDIDO</button>
+  <h1>Smart Consig - Entenda Seu Crédito</h1>
 
-    <script>
-        // Lista de consultores
-        const consultores = [
-            "https://wa.me/5511947451158?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças",
-            "https://wa.me/5511932310905?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças",
-            "https://wa.me/5511947917606?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças",
-            "https://wa.me/5511953994317?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças",
-            "https://wa.me/5511966132035?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças",
-            "https://wa.me/5511962812748?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças",
-            "https://wa.me/5511966500701?text=Olá,%20preciso%20de%20ajuda%20com%20as%20minhas%20finanças"
-        ];
+  <div class="canva-embed">
+    <iframe loading="lazy"
+      src="https://www.canva.com/design/DAGstRV0slQ/AxsdcLclOUi-6mwbnk7nJg/view?embed"
+      allowfullscreen="allowfullscreen" allow="fullscreen">
+    </iframe>
+  </div>
 
-        // Função principal
-        function atenderCliente() {
-            // Recupera ou inicializa o índice
-            let indice = localStorage.getItem('indiceConsultor') || 0;
-            indice = parseInt(indice);
-
-            // Redireciona para o consultor atual
-            window.open(consultores[indice], '_blank');
-
-            // Atualiza o índice
-            indice = (indice + 1) % consultores.length;
-            localStorage.setItem('indiceConsultor', indice);
-        }
-    </script>
+  <a class="canva-link" href="https://www.canva.com/design/DAGstRV0slQ/AxsdcLclOUi-6mwbnk7nJg/view?utm_content=DAGstRV0slQ&utm_campaign=designshare&utm_medium=embeds&utm_source=link"
+     target="_blank" rel="noopener">
+    Ver no Canva: Smart Consig - Entenda Seu Crédito
+  </a>
 </body>
 </html>
